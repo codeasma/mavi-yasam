@@ -1,8 +1,8 @@
 
 const CONFIG = {
-  phone: "905378539036",      // country code + number, digits only (e.g. 905321234567)
+  phone: "905378539036",      
   email: "",
-  gaId: ""                    // Google Analytics ID like "G-XXXXXXXXXX" (leave empty to disable)
+  gaId: ""                    
 };
 // ===================================
 const $ = (s) => [...document.querySelectorAll(s)];
@@ -36,7 +36,7 @@ document.addEventListener("click", (e) => {
   else if (e.target.closest("#lb")) lb.close();
 });
 
-// Analytics (Google Analytics 4, only loads if gaId is set)
+// Analytics
 window.dataLayer = window.dataLayer || [];
 function gtag() { dataLayer.push(arguments); }
 function track(name, params) { if (CONFIG.gaId) gtag("event", name, params || {}); }
